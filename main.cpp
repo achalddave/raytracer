@@ -3,8 +3,7 @@
 char* output_file = "output/tmp.png";
 
 void pause() {
-  int a;
-  cin >> a;
+  cin.get();
 }
 
 int main(int argc, char** argv) {
