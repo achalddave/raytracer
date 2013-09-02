@@ -1,5 +1,7 @@
 #include "util.hh"
 
+char* output_file = "output/tmp.png";
+
 void pause() {
   int a;
   cin >> a;
@@ -17,10 +19,10 @@ int main(int argc, char** argv) {
     }
   }
 
-  if (FreeImage_Save(FIF_PNG, bitmap, "tmp.png", 0)) {
-    cout << "Image saved to " << "tmp.png" << endl;
+  if (FreeImage_Save(FIF_PNG, bitmap, output_file, 0)) {
+    cout << "Image saved to " << output_file << endl;
   } else {
-    cout << "Could not save the image to " << "tmp.png" << endl;
+    cout << "Could not save the image to " << output_file << endl;
   }
   pause();
 }
